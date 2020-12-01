@@ -1,0 +1,113 @@
+.header-containor{
+    display: flex;
+    flex-direction: column;
+    background:linear-gradient(180deg, rgba(231,234,243,1) 0%,
+    rgba(248,248,250,1) 100%);
+    height: 30%;
+    border-top-right-radius: 35px;
+    border-bottom-right-radius: 35px;
+    border-bottom-left-radius: 35px;
+    box-shadow: 0px 20px 12px 0px rgba(161, 137, 182, 0.4);
+}
+.top-header{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    &-month{
+        margin-left: 20px;
+        font-size: 20px;
+        color: #464f6ee0;
+    }
+    &-days{
+        margin: 1px;
+        color: #464f6ee0;
+        
+    }
+
+    &-search{
+        position: relative;
+        &-icon{
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            top: 5px;
+            left: 8px;
+            background-color: #9fa6be36;
+            padding:3px;
+            border-radius: 50px;
+        }
+        &-input{
+            margin-right: 30px;
+            border: none;
+            outline: none;
+            background-color: #DFE3EE;
+            width: 160px;
+            height: 35px;
+            border-radius: 30px;
+            text-align: center;
+            box-shadow: 10px 10px 14px 0px rgba(107,89,123,0.1);
+            &::placeholder{
+                text-align: center;
+                color: #464f6e91 ;
+                font-weight: bold;
+            }
+        }
+
+    }
+}
+
+.title-callender{
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+    justify-content: center;
+
+    &-Arrow{
+        width: 8px;
+        height: 8px;
+        padding: 5px;
+        background-color: #464f6e17;
+        border-radius: 40px;
+        cursor: pointer;
+        &-right{
+            transform: rotate(-90deg);
+            margin-left: 20px;
+        }
+        &-left{
+            transform: rotate(90deg);
+            margin-right: 20px;
+        }
+
+    }
+    
+
+    &-sub{
+        margin: 0 20px;
+        padding: 4px;
+        margin-top: -3px;
+        color: #4e5674d7;
+        cursor: pointer;
+        &:hover{
+            color: #f0f2f5;
+            background-color: #F79466;
+            border-radius: 10px;
+        }
+    }
+}
+.days-of-week{
+    background-color: #e4e5eca8;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    height: 66px;
+    border-bottom-right-radius: 35px;
+    border-bottom-left-radius: 35px;
+    margin-top: 20px;
+    &-name{
+        font-weight: bold;
+        color: #4e5674bb;
+        margin-top: 24px;
+    }
+}
+

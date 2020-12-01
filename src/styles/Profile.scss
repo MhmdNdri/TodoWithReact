@@ -1,0 +1,28 @@
+.profile{
+    height: 12%;
+    background-color: #E6E9F2;
+    border-bottom: 1px solid #cdd0db;
+    border-top-left-radius: 30px;
+    position: relative;
+    &-img{
+      position: absolute;
+      top: 18px;
+      left: 15px;
+      width:40px;
+      height:40px;
+      border-radius: 100%;
+    }
+    &-title{
+      color: #747786 ;
+      position: absolute;
+      top: 25px;
+      left:65px;
+    }
+    &-name{
+      color: #51536A;
+      font-weight: bold;
+      position: absolute;
+      top: 40px;
+      left:80px;
+    }
+  }
