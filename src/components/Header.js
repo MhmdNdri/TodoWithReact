@@ -4,13 +4,20 @@ import search from "../assets/Search.png"
 import arrow from "../assets/ArrowDown.png"
 
 const Header = () => {
+
+    let currentTime = new Date();
+
+    let year = currentTime.getFullYear();
+    let month = currentTime.toLocaleString('default', { month: 'long' })
+    let day = currentTime.getDay()
+    let dayName = currentTime.toLocaleString("default", { weekday: "long" })
     return (
         <div className="header-containor">
             <div className="top-header">
-                <h3 className="top-header-month">November 2019</h3>
+                <h3 className="top-header-month">{month} {year}</h3>
                 <div className="top-header-days">
                     <h4 >Today</h4>
-                    <p style={{ marginTop: "4px" }}>18, Mon</p>
+                    <p style={{ marginTop: "4px" }}> {day}, {dayName}</p>
                 </div>
                 <div className="top-header-search">
                     <img src={search} className="top-header-search-icon" />
@@ -25,8 +32,8 @@ const Header = () => {
                 <img src={arrow} className="title-callender-Arrow title-callender-Arrow-right" />
             </div>
             <div className="days-of-week">
-                <span className="days-of-week-name">Mon</span>
                 <span className="days-of-week-name">Sun</span>
+                <span className="days-of-week-name">Mon</span>
                 <span className="days-of-week-name">Tue</span>
                 <span className="days-of-week-name">Wed</span>
                 <span className="days-of-week-name">Thu</span>
