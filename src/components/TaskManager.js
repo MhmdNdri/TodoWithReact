@@ -4,11 +4,11 @@ import plus from "../assets/plus.png"
 import arrow from "../assets/ArrowDown.png"
 
 
-const TaskManager = () => {
+const TaskManager = ({ setShow }) => {
     return (
         <div className="task-manager">
             <div className="task-manager-add">
-                <button className="task-manager-add-btn">
+                <button className="task-manager-add-btn" onClick={() => setShow(true)}>
                     <img src={plus} className="task-manager-add-btn-plus" />
                     <p className="task-manager-add-btn-txt">Add Task</p>
                 </button>
@@ -28,6 +28,7 @@ const TaskManager = () => {
                 </h4>
                 <h3 className="task-manager-add-tasks task-manager-completed-done"></h3>
             </div>
+
         </div>
     )
 }
