@@ -10,20 +10,22 @@ import Modal from './Modal';
 function App() {
 
   const [date, setDate] = useState(new Date());
-  const [show, setShow] = useState(false)
-  const [clicked, isClicked] = useState(false)
+  const [modal, setModal] = useState(false)
+
+
+  console.log(modal)
 
   return (
     <div>
-      <Modal closeValue={clicked} onCloseClick={isClicked} show={show} />
+      <Modal closeModal={modal} onCloseModal={setModal} showModal={modal} />
       <div className="container">
         <div className="left-column">
           <Profile />
-          <TaskManager setShow={setShow} />
+          <TaskManager intialShow={modal} setShowModal={setModal} />
         </div>
         <div className="right-column">
           <Header />
-          <Calendar value={date} onClickDay={setDate} className="react-calendar" />
+          <Calendar value={date} onClickDay={setDate} />
         </div>
       </div>
     </div>

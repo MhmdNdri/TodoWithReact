@@ -4,11 +4,11 @@ import plus from "../assets/plus.png"
 import arrow from "../assets/ArrowDown.png"
 
 
-const TaskManager = ({ setShow }) => {
+const TaskManager = ({ intialShow, setShowModal }) => {
     return (
         <div className="task-manager">
             <div className="task-manager-add">
-                <button className="task-manager-add-btn" onClick={() => setShow(true)}>
+                <button className="task-manager-add-btn" onClick={() => setShowModal(true)}>
                     <img src={plus} className="task-manager-add-btn-plus" />
                     <p className="task-manager-add-btn-txt">Add Task</p>
                 </button>
@@ -31,6 +31,7 @@ const TaskManager = ({ setShow }) => {
 
         </div>
     )
+
 }
 
 export default TaskManager
